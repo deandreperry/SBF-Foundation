@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sbf-main: #6d01ad;
+  --sbf-hover: #59018d;
+  --sbf-light: #f7f1fb;
+  --sbf-soft: #f2ebf7;
+  --ink: #29272c;
+  --muted: #6f6976;
+  --white: #ffffff;
+  --line: #e7dcec;
+  --shadow: 0 14px 34px rgba(67, 27, 91, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.icon-sprite {
+  display: none;
+}
+
+.sbf-contact-page,
+.sbf-contact-page * {
+  box-sizing: border-box;
+}
+
+.sbf-contact-page {
+  overflow: hidden;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sbf-contact-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sbf-contact-page svg {
+  display: block;
+}
+
+.sbf-container {
+  width: min(100% - 40px, 1120px);
+  margin: 0 auto;
+}
+
+.contact-hero {
+  padding: 78px 0 86px;
+  background: var(--sbf-light);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 880px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--sbf-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.sbf-contact-page h1,
+.sbf-contact-page h2,
+.sbf-contact-page h3,
+.sbf-contact-page p {
+  margin-top: 0;
+}
+
+.sbf-contact-page h1 {
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-size: clamp(2.75rem, 6vw, 4.7rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.hero-content > p:last-child {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+}
+
+.department-section {
+  padding: 78px 0 92px;
+  background: var(--white);
+}
+
+.section-heading {
+  max-width: 780px;
+}
+
+.section-heading--center {
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-size: clamp(1.85rem, 3.4vw, 2.72rem);
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+.section-heading p:not(.eyebrow) {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.department-card {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  min-height: 100%;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.department-card:hover {
+  border-color: rgba(109, 1, 173, 0.34);
+  box-shadow: 0 18px 38px rgba(67, 27, 91, 0.13);
+  transform: translateY(-2px);
+}
+
+.department-icon,
+.crisis-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--sbf-main);
+  color: var(--white);
+}
+
+.department-icon {
+  grid-row: 1 / span 3;
+}
+
+.department-card h3,
+.department-card p,
+.department-card .email-link {
+  grid-column: 2;
+}
+
+.department-icon svg,
+.crisis-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.department-card h3 {
+  margin-bottom: 10px;
+  color: var(--sbf-main);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.department-card p {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.email-link {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--sbf-main);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.email-link:hover,
+.email-link:focus-visible {
+  color: var(--sbf-hover);
+}
+
+.crisis-section {
+  padding: 86px 0;
+  background: linear-gradient(135deg, #c89dd8 0%, var(--sbf-main) 70%, var(--sbf-hover) 100%);
+  color: var(--white);
+}
+
+.crisis-content .eyebrow,
+.crisis-content h2,
+.crisis-content p {
+  color: var(--white);
+}
+
+.crisis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.crisis-card {
+  padding: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  color: var(--white);
+  text-align: center;
+}
+
+.crisis-icon {
+  margin: 0 auto 18px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.crisis-card h3 {
+  margin-bottom: 12px;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.crisis-card p {
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.crisis-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--sbf-main);
+  font-weight: 700;
+  line-height: 1.2;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.crisis-button:hover,
+.crisis-button:focus-visible {
+  background: var(--sbf-soft);
+  color: var(--sbf-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 980px) {
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .sbf-container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .contact-hero,
+  .department-section,
+  .crisis-section {
+    padding: 58px 0;
+  }
+
+  .department-card {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .department-icon,
+  .department-card h3,
+  .department-card p,
+  .department-card .email-link {
+    grid-column: 1;
+  }
+
+  .department-icon {
+    grid-row: auto;
+  }
+
+  .department-icon,
+  .crisis-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .crisis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crisis-card {
+    padding: 24px;
+  }
+}
+
+/* WordPress theme override guard */
+.sbf-contact-page,
+.sbf-contact-page * {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+.sbf-contact-page .department-icon {
+  background: #6d01ad !important;
+  color: #ffffff !important;
+}
+
+.sbf-contact-page .department-icon svg,
+.sbf-contact-page .crisis-icon svg {
+  color: currentColor !important;
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+.sbf-contact-page .eyebrow,
+.sbf-contact-page .department-card h3,
+.sbf-contact-page .email-link {
+  color: #6d01ad !important;
+}
+
+.sbf-contact-page .email-link:hover,
+.sbf-contact-page .email-link:focus-visible {
+  color: #59018d !important;
+}
+
+.sbf-contact-page .crisis-section {
+  background: linear-gradient(135deg, #c89dd8 0%, #6d01ad 70%, #59018d 100%) !important;
+  color: #ffffff !important;
+}
+
+.sbf-contact-page .crisis-section *,
+.sbf-contact-page .crisis-content .eyebrow,
+.sbf-contact-page .crisis-content h2,
+.sbf-contact-page .crisis-content p {
+  color: #ffffff !important;
+}
+
+.sbf-contact-page .crisis-icon {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+}
+
+.sbf-contact-page .crisis-button {
+  background: #ffffff !important;
+  color: #6d01ad !important;
+}
+
+.sbf-contact-page .crisis-button:hover,
+.sbf-contact-page .crisis-button:focus-visible {
+  background: #f2ebf7 !important;
+  color: #59018d !important;
+}
