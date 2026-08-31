@@ -1,0 +1,1029 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sbf-main: #6d01ad;
+  --sbf-hover: #59018d;
+  --sbf-mid: #8844b4;
+  --sbf-light: #f7f1fb;
+  --sbf-soft: #f2ebf7;
+  --ink: #29272c;
+  --muted: #6f6976;
+  --white: #ffffff;
+  --line: #e7dcec;
+  --shadow: 0 14px 34px rgba(67, 27, 91, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.icon-sprite {
+  display: none;
+}
+
+.sbf-dmv-plates-page,
+.sbf-dmv-plates-page * {
+  box-sizing: border-box;
+}
+
+.sbf-dmv-plates-page {
+  overflow: hidden;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sbf-dmv-plates-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sbf-dmv-plates-page svg {
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, 1120px);
+  margin: 0 auto;
+}
+
+.dmv-hero {
+  padding: 78px 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(247, 241, 251, 0.96)),
+    linear-gradient(135deg, #ffffff 0%, #f7effb 48%, #efe3f6 100%);
+}
+
+.hero-grid,
+.feature-grid,
+.purpose-grid {
+  display: grid;
+  gap: clamp(30px, 5vw, 72px);
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  align-items: center;
+}
+
+.feature-grid,
+.purpose-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+  align-items: center;
+}
+
+.feature-grid--plate {
+  grid-template-columns: minmax(360px, 1.05fr) minmax(0, 0.95fr);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--sbf-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.sbf-dmv-plates-page h1,
+.sbf-dmv-plates-page h2,
+.sbf-dmv-plates-page h3,
+.sbf-dmv-plates-page p,
+.sbf-dmv-plates-page figure,
+.sbf-dmv-plates-page blockquote {
+  margin-top: 0;
+}
+
+.sbf-dmv-plates-page h1 {
+  margin-bottom: 20px;
+  color: var(--ink);
+  font-size: clamp(2.55rem, 5.8vw, 4.65rem);
+  font-weight: 600;
+  line-height: 1.06;
+}
+
+.hero-copy p:last-of-type,
+.program-copy p {
+  color: var(--muted);
+}
+
+.hero-copy p:last-of-type {
+  max-width: 680px;
+  margin-bottom: 0;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+}
+
+.plate-showcase,
+.plate-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.plate-showcase {
+  padding: clamp(16px, 2.5vw, 24px);
+}
+
+.plate-showcase--pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mini-plate {
+  margin: 0;
+}
+
+.plate-showcase img,
+.plate-card img,
+.plate-option img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.plate-showcase img {
+  aspect-ratio: 16 / 9;
+}
+
+.plate-card img,
+.plate-option img {
+  aspect-ratio: 16 / 9;
+}
+
+.plate-showcase figcaption,
+.plate-card figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button-row--center {
+  justify-content: center;
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--sbf-main);
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.pill-button:hover,
+.pill-button:focus-visible {
+  background: var(--sbf-hover);
+  box-shadow: 0 12px 26px rgba(109, 1, 173, 0.24);
+  transform: translateY(-1px);
+}
+
+.pill-button--outline {
+  border: 2px solid var(--sbf-main);
+  background: transparent;
+  color: var(--sbf-main);
+}
+
+.pill-button--outline:hover,
+.pill-button--outline:focus-visible {
+  background: var(--sbf-main);
+  color: var(--white);
+}
+
+.why-section,
+.plate-section,
+.support-section,
+.cta-section {
+  padding: 86px 0;
+  background: var(--white);
+}
+
+.visibility-section,
+.preorder-section,
+.progress-section,
+.purpose-section {
+  padding: 86px 0;
+  background: var(--sbf-light);
+}
+
+.section-heading {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+}
+
+.section-heading--center {
+  justify-content: center;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.section-heading h2,
+.program-copy h2,
+.progress-card h2,
+.purpose-grid h2,
+.cta-card h2 {
+  color: var(--ink);
+  font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.icon-bubble,
+.impact-icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sbf-main);
+  color: var(--white);
+}
+
+.icon-bubble {
+  width: 54px;
+  height: 54px;
+}
+
+.impact-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 18px;
+}
+
+.icon-bubble svg,
+.impact-icon svg,
+.check-list svg,
+.support-list svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.impact-grid,
+.steps-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.impact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.steps-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.impact-card,
+.step-card,
+.detail-card,
+.progress-card,
+.plate-option,
+.clarity-note,
+.recognition-panel,
+.support-list article,
+.purpose-grid blockquote,
+.cta-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.impact-card,
+.step-card,
+.plate-option,
+.support-list article {
+  background: var(--white);
+  padding: 28px;
+}
+
+.impact-card h3,
+.step-card h3,
+.plate-option h3,
+.support-list h3 {
+  margin-bottom: 10px;
+  color: var(--sbf-main);
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.impact-card p,
+.step-card p,
+.step-card li,
+.plate-option p,
+.price-list dt,
+.support-list p,
+.purpose-grid p,
+.progress-card p,
+.cta-card p {
+  color: var(--muted);
+}
+
+.plate-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.plate-option {
+  display: grid;
+  gap: 22px;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.plate-option-copy h3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.price-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.price-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: var(--sbf-soft);
+}
+
+.price-list dt,
+.price-list dd {
+  margin: 0;
+}
+
+.price-list dt {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.price-list dd {
+  color: var(--sbf-main);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.price-list--fibro dd {
+  color: var(--ink);
+}
+
+.clarity-note {
+  margin-top: 26px;
+  padding: 22px 26px;
+  background: var(--sbf-soft);
+  color: var(--muted);
+}
+
+.clarity-note strong {
+  color: var(--sbf-main);
+}
+
+.recognition-panel {
+  padding: clamp(30px, 5vw, 52px);
+  margin-top: 28px;
+  background: var(--white);
+}
+
+.recognition-panel h2 {
+  margin-bottom: 16px;
+  color: var(--ink);
+  font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+.recognition-panel p {
+  color: var(--muted);
+}
+
+.preorder-status {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  margin-top: 18px;
+  border: 1px solid rgba(109, 1, 173, 0.16);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #faf6fd 0%, var(--sbf-soft) 100%);
+}
+
+.preorder-status__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.preorder-status__header span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.preorder-status__header strong {
+  color: var(--sbf-main);
+  font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.preorder-status__bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(109, 1, 173, 0.14);
+}
+
+.preorder-status__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--sbf-main);
+}
+
+.preorder-status__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.preorder-status__metrics div {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.preorder-status__metrics strong,
+.preorder-status__metrics span {
+  display: block;
+}
+
+.preorder-status__metrics strong {
+  color: var(--sbf-main);
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.preorder-status__metrics span {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.detail-card,
+.progress-card,
+.purpose-grid blockquote,
+.cta-card {
+  background: linear-gradient(135deg, #c89dd8 0%, var(--sbf-main) 70%, var(--sbf-hover) 100%);
+  color: var(--white);
+}
+
+.detail-card {
+  padding: clamp(30px, 5vw, 50px);
+}
+
+.detail-card p {
+  margin-bottom: 0;
+  color: var(--white);
+  font-size: clamp(1.25rem, 2.6vw, 1.78rem);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.card-kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.program-copy .icon-bubble {
+  margin-bottom: 18px;
+}
+
+.program-copy h2 {
+  margin-bottom: 16px;
+}
+
+.program-copy p {
+  margin-bottom: 16px;
+}
+
+.check-list {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.check-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--muted);
+}
+
+.check-list svg {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin-top: 4px;
+  color: var(--sbf-main);
+}
+
+.check-list strong {
+  color: var(--ink);
+}
+
+.step-card {
+  position: relative;
+}
+
+.step-number {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sbf-main);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.step-card ul {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--sbf-main);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.progress-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+  gap: clamp(28px, 5vw, 62px);
+  align-items: center;
+  padding: clamp(30px, 5vw, 52px);
+}
+
+.progress-card .eyebrow,
+.progress-card h2,
+.progress-card p,
+.purpose-grid blockquote p,
+.purpose-grid blockquote footer,
+.cta-card h2,
+.cta-card p {
+  color: var(--white);
+}
+
+.progress-meter {
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.progress-top span {
+  font-weight: 600;
+}
+
+.progress-top strong {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.progress-track {
+  height: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--white);
+}
+
+.progress-meter p {
+  margin: 14px 0 0;
+  font-weight: 600;
+}
+
+.cost-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.cost-grid div {
+  padding: 18px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.cost-grid span,
+.cost-grid strong,
+.cost-grid small {
+  display: block;
+}
+
+.cost-grid span {
+  color: var(--sbf-main);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.cost-grid strong {
+  margin-top: 6px;
+  color: var(--sbf-main);
+  font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+  line-height: 1.05;
+}
+
+.cost-grid small {
+  margin-top: 4px;
+  color: var(--sbf-hover);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.support-list {
+  display: grid;
+  gap: 16px;
+}
+
+.support-list article {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.support-list svg {
+  width: 26px;
+  height: 26px;
+  margin-top: 3px;
+  color: var(--sbf-main);
+}
+
+.support-list h3,
+.support-list p {
+  margin-bottom: 0;
+}
+
+.purpose-grid blockquote {
+  padding: clamp(30px, 5vw, 46px);
+}
+
+.purpose-grid blockquote p {
+  font-size: clamp(1.22rem, 2.6vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.purpose-grid blockquote footer {
+  font-weight: 700;
+}
+
+.cta-section {
+  padding-bottom: 92px;
+}
+
+.cta-card {
+  padding: clamp(34px, 6vw, 62px);
+  text-align: center;
+}
+
+.cta-card .icon-bubble {
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.cta-card p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.cta-card .pill-button {
+  background: var(--white);
+  color: var(--sbf-main);
+}
+
+.cta-card .pill-button:hover,
+.cta-card .pill-button:focus-visible {
+  background: var(--sbf-soft);
+}
+
+.cta-card .pill-button--outline {
+  border-color: var(--white);
+  background: transparent;
+  color: var(--white);
+}
+
+.cta-card .pill-button--outline:hover,
+.cta-card .pill-button--outline:focus-visible {
+  background: var(--white);
+  color: var(--sbf-main);
+}
+
+@media (max-width: 980px) {
+  .container {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .dmv-hero,
+  .why-section,
+  .visibility-section,
+  .plate-section,
+  .preorder-section,
+  .progress-section,
+  .support-section,
+  .purpose-section,
+  .cta-section {
+    padding: 66px 0;
+  }
+
+  .hero-grid,
+  .feature-grid,
+  .feature-grid--plate,
+  .purpose-grid,
+  .progress-card {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid,
+  .steps-grid,
+  .plate-options-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .sbf-dmv-plates-page {
+    font-size: 15px;
+  }
+
+  .container {
+    width: min(100% - 26px, 1120px);
+  }
+
+  .sbf-dmv-plates-page h1 {
+    font-size: 2.45rem;
+  }
+
+  .impact-grid,
+  .steps-grid,
+  .plate-showcase--pair,
+  .plate-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-heading--center {
+    align-items: center;
+  }
+
+  .icon-bubble {
+    width: 46px;
+    height: 46px;
+  }
+
+  .plate-showcase,
+  .plate-card,
+  .impact-card,
+  .step-card,
+  .plate-option,
+  .clarity-note,
+  .recognition-panel,
+  .detail-card,
+  .progress-card,
+  .support-list article,
+  .purpose-grid blockquote,
+  .cta-card {
+    padding: 24px;
+  }
+
+  .button-row,
+  .button-row--center {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pill-button {
+    width: 100%;
+  }
+
+  .cost-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preorder-status__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .preorder-status__metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* WordPress/theme override guard */
+.sbf-dmv-plates-page,
+.sbf-dmv-plates-page * {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+.sbf-dmv-plates-page .icon-bubble,
+.sbf-dmv-plates-page .impact-icon,
+.sbf-dmv-plates-page .step-number,
+.sbf-dmv-plates-page .pill-button:not(.pill-button--outline) {
+  background: #6d01ad !important;
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .pill-button:not(.pill-button--outline):hover,
+.sbf-dmv-plates-page .pill-button:not(.pill-button--outline):focus-visible {
+  background: #59018d !important;
+}
+
+.sbf-dmv-plates-page .pill-button--outline {
+  border-color: #6d01ad !important;
+  background: transparent !important;
+  color: #6d01ad !important;
+}
+
+.sbf-dmv-plates-page .pill-button--outline:hover,
+.sbf-dmv-plates-page .pill-button--outline:focus-visible {
+  background: #6d01ad !important;
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .icon-bubble svg,
+.sbf-dmv-plates-page .impact-icon svg,
+.sbf-dmv-plates-page .step-number svg {
+  color: #ffffff !important;
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+.sbf-dmv-plates-page .detail-card,
+.sbf-dmv-plates-page .progress-card,
+.sbf-dmv-plates-page .purpose-grid blockquote,
+.sbf-dmv-plates-page .cta-card {
+  background: linear-gradient(135deg, #c89dd8 0%, #6d01ad 70%, #59018d 100%) !important;
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .detail-card *,
+.sbf-dmv-plates-page .progress-card *,
+.sbf-dmv-plates-page .purpose-grid blockquote *,
+.sbf-dmv-plates-page .cta-card * {
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .eyebrow,
+.sbf-dmv-plates-page .impact-card h3,
+.sbf-dmv-plates-page .step-card h3,
+.sbf-dmv-plates-page .plate-option h3,
+.sbf-dmv-plates-page .support-list h3,
+.sbf-dmv-plates-page .text-link,
+.sbf-dmv-plates-page .check-list svg,
+.sbf-dmv-plates-page .support-list svg,
+.sbf-dmv-plates-page .price-list dd,
+.sbf-dmv-plates-page .preorder-status__header strong,
+.sbf-dmv-plates-page .preorder-status__metrics strong,
+.sbf-dmv-plates-page .clarity-note strong {
+  color: #6d01ad !important;
+}
+
+.sbf-dmv-plates-page .preorder-status__header span,
+.sbf-dmv-plates-page .preorder-status__metrics span {
+  color: #6f6976 !important;
+}
+
+.sbf-dmv-plates-page .preorder-status__bar span {
+  background: #6d01ad !important;
+}
+
+.sbf-dmv-plates-page .price-list--fibro dd {
+  color: #29272c !important;
+}
+
+.sbf-dmv-plates-page .progress-card .eyebrow,
+.sbf-dmv-plates-page .progress-card h2,
+.sbf-dmv-plates-page .progress-card p,
+.sbf-dmv-plates-page .purpose-grid blockquote p,
+.sbf-dmv-plates-page .purpose-grid blockquote footer,
+.sbf-dmv-plates-page .cta-card h2,
+.sbf-dmv-plates-page .cta-card p {
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .progress-card .cost-grid span,
+.sbf-dmv-plates-page .progress-card .cost-grid strong {
+  color: #6d01ad !important;
+}
+
+.sbf-dmv-plates-page .progress-card .cost-grid small {
+  color: #59018d !important;
+}
+
+.sbf-dmv-plates-page .cta-card .pill-button:not(.pill-button--outline) {
+  background: #ffffff !important;
+  color: #6d01ad !important;
+}
+
+.sbf-dmv-plates-page .cta-card .pill-button:not(.pill-button--outline):hover,
+.sbf-dmv-plates-page .cta-card .pill-button:not(.pill-button--outline):focus-visible {
+  background: #f2ebf7 !important;
+  color: #59018d !important;
+}
+
+.sbf-dmv-plates-page .cta-card .pill-button--outline {
+  border-color: #ffffff !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.sbf-dmv-plates-page .cta-card .pill-button--outline:hover,
+.sbf-dmv-plates-page .cta-card .pill-button--outline:focus-visible {
+  background: #ffffff !important;
+  color: #6d01ad !important;
+}
