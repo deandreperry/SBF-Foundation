@@ -84,7 +84,8 @@
 .press-about-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:64px; }
 .press-about-grid p:not(.eyebrow) { color:var(--sbf-muted); margin-bottom:26px; }
 .press-inquiry { padding:64px 0; color:white; background:var(--sbf-main); scroll-margin-top:100px; }
-.press-inquiry h2 { max-width:800px; }
+/* Explicit heading color prevents host-theme heading rules replacing inherited white. */
+.sbf-press-page .press-inquiry h2#inquiry-title { max-width:800px; color:var(--sbf-white); }
 .sbf-press-page .press-inquiry .eyebrow { color:white; }
 .sbf-press-page .press-inquiry p:not(.eyebrow) { max-width:760px; margin-top:22px; }
 .sbf-press-page .press-inquiry .pill-button { background:white; color:var(--sbf-main); border-color:white; }
