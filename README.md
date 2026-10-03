@@ -7,6 +7,7 @@ This repository collects the editable HTML and CSS pages prepared for Social But
 | Page | Local path |
 | --- | --- |
 | Home | `/index.html` |
+| $8 for 8 Years | `/8for8/index.html` |
 | About | `/about/index.html` |
 | Programs | `/programs/index.html` |
 | Resource Center | `/resources/index.html` |
@@ -38,3 +39,5 @@ Then open `http://localhost:8000` in a browser.
 ## Current scope
 
 These are static page implementations. They do not include the WordPress theme, plugins, WooCommerce data, forms backend, media library, or the live site's administrative configuration.
+
+Campaign implementation, QA, WordPress integration, and archival notes: [8for8/README.md](8for8/README.md).

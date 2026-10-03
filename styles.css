@@ -561,11 +561,35 @@
   overflow: hidden;
 }
 
-.event-card img {
-  display: block;
+.event-card-media {
   width: 100%;
   aspect-ratio: 16 / 10;
+  margin: 0;
+  overflow: hidden;
+  background: var(--sbf-soft);
+}
+
+.event-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.event-card-media--anniversary img {
+  object-position: center;
+}
+
+.event-card-media--avengers {
+  background: #1f1724;
+}
+
+.event-card-media--avengers img {
+  object-position: center 28%;
+}
+
+.event-card-media--coming-soon img {
+  object-position: center 48%;
 }
 
 .event-card-copy {
@@ -575,6 +599,10 @@
   padding: 22px;
 }
 
+.event-card-copy h3 {
+  min-height: 3em;
+}
+
 .card-kicker {
   display: block;
   margin-bottom: 10px;
@@ -582,6 +610,38 @@
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.event-meta {
+  min-height: 64px;
+  margin-bottom: 12px;
+}
+
+.event-meta p {
+  margin-bottom: 6px;
+}
+
+.event-meta p:last-child {
+  margin-bottom: 0;
+}
+
+.event-date {
+  color: var(--sbf-ink) !important;
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.event-secondary {
+  font-size: 0.85rem;
+}
+
+.event-description {
+  margin-bottom: 22px;
+  font-size: 0.94rem;
+}
+
+.event-card--coming-soon {
+  background: #fdfbfe;
 }
 
 .event-button {
@@ -985,6 +1045,11 @@
     padding: 22px;
   }
 
+  .event-card-copy h3,
+  .event-meta {
+    min-height: 0;
+  }
+
   .newsletter-fields label:first-child {
     grid-column: auto;
   }
@@ -1158,3 +1223,13 @@
 .sbf-home-page .coming-soon {
   color: #6d01ad !important;
 }
+
+/* Dedicated anniversary campaign teaser; no donation iframe on the homepage. */
+.sbf-home-page .anniversary-teaser { padding: 40px 0; background: var(--sbf-soft); border-block: 1px solid var(--sbf-line); }
+.sbf-home-page .anniversary-teaser-grid { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 32px; align-items: center; }
+.sbf-home-page .anniversary-teaser h2 { margin: 0 0 12px; font-size: clamp(1.8rem,3vw,2.5rem); line-height: 1.2; font-weight: 600; }
+.sbf-home-page .anniversary-teaser p:not(.eyebrow) { max-width: 720px; margin-bottom: 0; }
+.sbf-home-page .anniversary-teaser-date { color: var(--sbf-muted); font-size: .875rem; margin-top: 12px; }
+.sbf-home-page .anniversary-teaser a:focus-visible { outline: 3px solid var(--sbf-main); outline-offset: 5px; }
+@media (max-width:680px) { .sbf-home-page .anniversary-teaser-grid { grid-template-columns: 1fr; gap: 24px; } }
+@media (prefers-reduced-motion:reduce) { .sbf-home-page .anniversary-teaser .pill-button { transition: none; transform: none; } }

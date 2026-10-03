@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Page-scoped SBF foundations, following the existing standalone Press page.
+   Keep the WordPress shell's header, navigation and footer styles intact. */
+.sbf-campaign-page {
+  --sbf-main: #6d01ad;
+  --sbf-hover: #59018d;
+  --sbf-light: #f7f1fb;
+  --sbf-soft: #f2ebf7;
+  --sbf-ink: #29272c;
+  --sbf-muted: #6f6976;
+  --sbf-white: #ffffff;
+  --sbf-line: #e7dcec;
+  margin: 0;
+  color: var(--sbf-ink);
+  background: var(--sbf-white);
+  font: 400 16px/1.65 "Poppins", Arial, sans-serif;
+}
+.sbf-campaign-page *, .sbf-campaign-page *::before, .sbf-campaign-page *::after { box-sizing: border-box; }
+.sbf-campaign-page :is(h1,h2,h3,p) { margin: 0; }
+.sbf-campaign-page :is(h1,h2,h3) { font-weight: 600; }
+.sbf-campaign-page h2 { font-size: clamp(1.8rem,3vw,2.65rem); line-height: 1.2; letter-spacing: -.035em; }
+.sbf-campaign-page h3 { font-size: 1.1rem; line-height: 1.4; }
+.sbf-campaign-page p + p { margin-top: 18px; }
+.sbf-campaign-page a { color: var(--sbf-main); text-underline-offset: 4px; }
+.sbf-campaign-page a:hover { color: var(--sbf-hover); }
+.sbf-campaign-page :is(a,button,[tabindex]):focus-visible { outline: 3px solid var(--sbf-main); outline-offset: 5px; }
+.sbf-campaign-page .sbf-container { width: min(100% - 40px,1180px); margin-inline: auto; }
+.sbf-campaign-page .eyebrow { margin: 0 0 16px; color: var(--sbf-main); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .065em; }
+.sbf-campaign-page .pill-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 14px 28px; border: 2px solid var(--sbf-main); border-radius: 999px; background: var(--sbf-main); color: var(--sbf-white); font-weight: 600; line-height: 1.2; text-align: center; text-decoration: none; transition: background 180ms ease, color 180ms ease; }
+.sbf-campaign-page .pill-button:hover { background: var(--sbf-hover); border-color: var(--sbf-hover); }
+.sbf-campaign-page .pill-button--outline { background: transparent; color: var(--sbf-main); }
+.sbf-campaign-page .pill-button--outline:hover { background: var(--sbf-main); color: var(--sbf-white); }
+.sbf-campaign-page .button-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.campaign-skip { position: absolute; z-index: 10; top: 12px; left: 12px; padding: 14px 20px; background: white; transform: translateY(-200%); }
+.campaign-skip:focus { transform: none; }
+.campaign-hero { padding: 76px 0 64px; background: linear-gradient(120deg,#fff 15%,var(--sbf-light)); }
+.campaign-hero-grid { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); align-items: center; gap: 72px; }
+.sbf-campaign-page h1 { font-size: clamp(3.4rem,6.4vw,5.8rem); line-height: 1.03; letter-spacing: -.055em; margin-bottom: 28px; }
+.sbf-campaign-page h1 span { display: block; color: var(--sbf-main); }
+.campaign-hero-copy > p:not(.eyebrow,.campaign-date) { max-width: 620px; }
+.sbf-campaign-page .campaign-lead { font-size: clamp(1.08rem,1.5vw,1.2rem); line-height: 1.65; }
+.sbf-campaign-page .campaign-date { color: var(--sbf-muted); font-size: .875rem; margin-top: 22px; }
+.anniversary-art { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 30px; border: 1px solid #dac8e5; border-radius: 180px 180px 8px 8px; background: var(--sbf-soft); color: var(--sbf-main); text-align: center; }
+.anniversary-top { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-top: 20px; }
+.anniversary-number { font-size: clamp(14rem,25vw,23rem); font-weight: 600; line-height: 1.05; letter-spacing: -.08em; margin-left: -.08em; color: transparent; -webkit-text-stroke: 1.5px var(--sbf-main); }
+.anniversary-bottom { font-size: .95rem; font-weight: 500; }
+.anniversary-marks { display: flex; gap: 9px; margin-top: 24px; }
+.anniversary-marks i { width: 5px; height: 5px; border-radius: 50%; background: var(--sbf-main); }
+.campaign-progress { padding: 0 0 12px; background: var(--sbf-light); }
+.progress-panel { border: 1px solid var(--sbf-line); border-radius: 8px; background: white; padding: 30px 36px 18px; }
+.progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.sbf-campaign-page .progress-heading h2 { max-width: 640px; font-size: clamp(1.35rem,2.1vw,1.8rem); letter-spacing: -.025em; }
+.progress-heading .eyebrow { margin-bottom: 8px; }
+.goal-label { flex-shrink: 0; color: var(--sbf-muted); text-align: right; }
+.goal-label strong { display: block; font-size: 2rem; line-height: 1.25; color: var(--sbf-main); }
+.sbf-campaign-page .progress-note { margin: 0; color: var(--sbf-muted); font-size: .875rem; }
+.progress-note a { display: inline-block; padding-block: 12px; }
+.campaign-section { padding: 76px 0; }
+.campaign-story { background: var(--sbf-light); }
+.campaign-story-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 80px; }
+.campaign-story .campaign-lead { font-size: clamp(1.4rem,2vw,1.8rem); font-weight: 500; line-height: 1.4; }
+.campaign-story-grid p + p { color: var(--sbf-muted); }
+.campaign-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.campaign-text-link { display: inline-flex; gap: 12px; align-items: center; min-height: 44px; font-size: .9rem; font-weight: 600; }
+.sbf-campaign-page .impact-intro { max-width: 740px; margin-top: 20px; color: var(--sbf-muted); }
+.campaign-impact-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 28px; margin-top: 38px; }
+.campaign-impact-grid article { border-top: 2px solid var(--sbf-line); padding-top: 22px; }
+.impact-number { display: block; margin-bottom: 20px; font-size: .75rem; font-weight: 600; letter-spacing: .055em; color: var(--sbf-main); }
+.campaign-impact-grid p { margin-top: 14px; color: var(--sbf-muted); font-size: .9rem; }
+.campaign-donate { background: var(--sbf-light); scroll-margin-top: 110px; }
+.donate-heading { max-width: 760px; margin-inline: auto; text-align: center; }
+.donate-heading > p:last-child { margin-top: 22px; color: var(--sbf-muted); }
+.donation-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; max-width: 960px; margin: 36px auto 0; border: 1px solid var(--sbf-line); border-radius: 8px; background: white; }
+.donation-options > div { padding: 24px; }
+.donation-options > div + div { border-left: 1px solid var(--sbf-line); }
+.donation-options h3 { font-size: 1.65rem; color: var(--sbf-main); }
+.donation-options h3 span { font-size: 1rem; }
+.donation-options p { margin-top: 10px; color: var(--sbf-muted); font-size: .9rem; }
+.sbf-campaign-page .donation-guidance { text-align: center; margin: 24px 0 20px; font-size: .9rem; }
+.zeffy-panel { width: 100%; max-width: 960px; margin-inline: auto; min-width: 0; border: 1px solid var(--sbf-line); border-radius: 8px; background: white; }
+.zeffy-panel { min-height: 600px; }
+.zeffy-panel iframe { display: block; max-width: 100%; }
+.zeffy-noscript { width: 100%; height: 650px; border: 0; }
+.sbf-campaign-page .donation-help { text-align: center; margin-top: 16px; font-size: .875rem; color: var(--sbf-muted); }
+.donation-help a { display: inline-block; padding-block: 12px; }
+.recurring-note { max-width: 760px; margin: 28px auto 0; text-align: center; }
+.recurring-note p { margin-top: 12px; color: var(--sbf-muted); font-size: .95rem; }
+.campaign-final { padding: 64px 0; background: var(--sbf-main); color: white; }
+.campaign-final-grid { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 64px; }
+.campaign-final p:not(.eyebrow) { max-width: 730px; margin-top: 22px; }
+.sbf-campaign-page .campaign-final .eyebrow { color: white; }
+.sbf-campaign-page .campaign-final .pill-button { background: white; color: var(--sbf-main); border-color: white; }
+.sbf-campaign-page .campaign-final .pill-button:hover { background: var(--sbf-soft); }
+.sbf-campaign-page .campaign-final a:focus-visible { outline-color: white; }
+@media (max-width:980px) {
+  .campaign-hero-grid { gap: 36px; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); }
+  .anniversary-art { padding: 24px 16px; }
+  .anniversary-top { font-size: .7rem; }
+  .campaign-story-grid { gap: 40px; }
+  .campaign-impact-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
+}
+@media (max-width:680px) {
+  .sbf-campaign-page .sbf-container { width: calc(100% - 32px); }
+  .campaign-hero { padding: 44px 0 32px; }
+  .campaign-hero-grid, .campaign-story-grid, .campaign-final-grid { grid-template-columns: 1fr; gap: 28px; }
+  .sbf-campaign-page h1 { font-size: clamp(3.3rem,13vw,5rem); }
+  .anniversary-art { display: none; }
+  .campaign-section { padding: 48px 0; }
+  .progress-panel { padding: 22px 14px 14px; }
+  .progress-heading { align-items: flex-start; gap: 12px; }
+  .goal-label { display: none; }
+  .campaign-section-heading { display: block; }
+  .campaign-text-link { margin-top: 14px; }
+  .campaign-impact-grid { gap: 28px 20px; }
+  .donation-options { grid-template-columns: 1fr; }
+  .donation-options > div { padding: 20px; }
+  .donation-options > div + div { border-left: 0; border-top: 1px solid var(--sbf-line); }
+  .campaign-final { padding: 48px 0; }
+  .campaign-final .pill-button { justify-self: start; }
+}
+@media (max-width:374px) {
+  .campaign-impact-grid { grid-template-columns: 1fr; }
+  .sbf-campaign-page .button-row { flex-direction: column; }
+  .sbf-campaign-page .button-row .pill-button { width: 100%; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .sbf-campaign-page *, .sbf-campaign-page *::before, .sbf-campaign-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* WordPress theme compatibility and separation from the existing site footer. */
+.sbf-campaign-page .campaign-final #final-title {
+  color: #ffffff !important;
+}
+.sbf-campaign-page {
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+/* Keep campaign button states legible under WordPress link/theme rules. */
+.sbf-campaign-page a.pill-button,
+.sbf-campaign-page a.pill-button:visited {
+  background: #6d01ad !important;
+  border-color: #6d01ad !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.sbf-campaign-page a.pill-button:is(:hover, :focus-visible, :active) {
+  background: #59018d !important;
+  border-color: #59018d !important;
+  color: #ffffff !important;
+}
+.sbf-campaign-page a.pill-button--outline,
+.sbf-campaign-page a.pill-button--outline:visited {
+  background: transparent !important;
+  border-color: #6d01ad !important;
+  color: #6d01ad !important;
+}
+.sbf-campaign-page a.pill-button--outline:is(:hover, :focus-visible, :active) {
+  background: #6d01ad !important;
+  border-color: #6d01ad !important;
+  color: #ffffff !important;
+}
+.sbf-campaign-page .campaign-final a.pill-button,
+.sbf-campaign-page .campaign-final a.pill-button:visited {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #6d01ad !important;
+}
+.sbf-campaign-page .campaign-final a.pill-button:is(:hover, :focus-visible, :active) {
+  background: #f2ebf7 !important;
+  border-color: #f2ebf7 !important;
+  color: #59018d !important;
+}
+.sbf-campaign-page a.pill-button:focus-visible {
+  outline: 3px solid #6d01ad !important;
+  outline-offset: 5px !important;
+}
+.sbf-campaign-page .campaign-final a.pill-button:focus-visible {
+  outline-color: #ffffff !important;
+}
