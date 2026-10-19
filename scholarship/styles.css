@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --sbf-main: #6d01ad;
+  --sbf-hover: #59018d;
+  --sbf-mid: #8844b4;
+  --sbf-light: #f7f1fb;
+  --sbf-soft: #f2ebf7;
+  --ink: #29272c;
+  --muted: #6f6976;
+  --white: #ffffff;
+  --line: #e7dcec;
+  --shadow: 0 14px 34px rgba(67, 27, 91, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.sbf-scholarship-page,
+.sbf-scholarship-page * {
+  box-sizing: border-box;
+}
+
+.sbf-scholarship-page {
+  overflow: hidden;
+  background: var(--sbf-light);
+  color: var(--ink);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sbf-scholarship-page h1,
+.sbf-scholarship-page h2,
+.sbf-scholarship-page p,
+.sbf-scholarship-page figure,
+.sbf-scholarship-page blockquote {
+  margin-top: 0;
+}
+
+.sbf-scholarship-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sbf-container {
+  width: min(100% - 40px, 1120px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--sbf-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.scholarship-hero {
+  padding: 76px 0 82px;
+  background:
+    radial-gradient(circle at 78% 38%, rgba(200, 157, 216, 0.28), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(247, 241, 251, 0.97)),
+    linear-gradient(135deg, #ffffff 0%, #f7effb 48%, #efe3f6 100%);
+}
+
+.scholarship-hero__grid,
+.scholarship-details__grid {
+  display: grid;
+  gap: clamp(34px, 6vw, 76px);
+  align-items: center;
+}
+
+.scholarship-hero__grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr);
+}
+
+.scholarship-details__grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  align-items: start;
+}
+
+.scholarship-hero__copy,
+.scholarship-copy {
+  min-width: 0;
+}
+
+.scholarship-hero h1 {
+  max-width: 720px;
+  margin-bottom: 20px;
+  color: var(--ink);
+  font-size: clamp(2.5rem, 5.5vw, 4.55rem);
+  font-weight: 600;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.scholarship-hero__copy > p:last-of-type {
+  max-width: 660px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: clamp(1.04rem, 1.7vw, 1.2rem);
+}
+
+.scholarship-flyer {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 24px 60px rgba(67, 27, 91, 0.15);
+}
+
+.scholarship-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--sbf-main);
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.pill-button:hover,
+.pill-button:focus-visible {
+  background: var(--sbf-hover);
+  box-shadow: 0 12px 26px rgba(109, 1, 173, 0.24);
+  transform: translateY(-1px);
+}
+
+.pill-button--outline {
+  border: 2px solid var(--sbf-main);
+  background: transparent;
+  color: var(--sbf-main);
+}
+
+.pill-button--outline:hover,
+.pill-button--outline:focus-visible {
+  background: var(--sbf-main);
+  color: var(--white);
+}
+
+.scholarship-details {
+  padding: 86px 0;
+  background: var(--white);
+}
+
+.scholarship-copy h2,
+.eligibility-card h2,
+.application-card h2 {
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-size: clamp(1.85rem, 3.4vw, 2.72rem);
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+.scholarship-copy > p:not(.eyebrow) {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.scholarship-copy blockquote {
+  padding: 22px 24px;
+  margin: 28px 0 0;
+  border-left: 4px solid var(--sbf-main);
+  border-radius: 0 8px 8px 0;
+  background: var(--sbf-soft);
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.scholarship-copy cite {
+  display: block;
+  margin-top: 8px;
+  color: var(--sbf-main);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.eligibility-card {
+  padding: clamp(30px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--sbf-light);
+  box-shadow: var(--shadow);
+}
+
+.eligibility-card h2 {
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+}
+
+.eligibility-card ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.eligibility-card li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--muted);
+}
+
+.eligibility-card li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--sbf-main);
+  content: "";
+}
+
+.eligibility-card li + li {
+  margin-top: 13px;
+}
+
+.application-section {
+  padding: 86px 0;
+  background: var(--sbf-light);
+}
+
+.application-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(28px, 5vw, 70px);
+  align-items: center;
+  padding: clamp(34px, 6vw, 64px);
+  border-radius: 8px;
+  background: linear-gradient(135deg, #c89dd8 0%, var(--sbf-main) 70%, var(--sbf-hover) 100%);
+  box-shadow: var(--shadow);
+  color: var(--white);
+}
+
+.application-card .eyebrow,
+.application-card h2,
+.application-card p {
+  color: var(--white);
+}
+
+.application-card p:last-child {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+.application-card p a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pill-button--light {
+  flex: 0 0 auto;
+  border: 2px solid var(--white);
+  background: var(--white);
+  color: var(--sbf-main);
+  white-space: nowrap;
+}
+
+.pill-button--light:hover,
+.pill-button--light:focus-visible {
+  background: transparent;
+  color: var(--white);
+}
+
+.pill-button:focus-visible,
+.application-card a:focus-visible {
+  outline: 3px solid #d8aff0;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .sbf-container {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .scholarship-hero__grid,
+  .scholarship-details__grid,
+  .application-card {
+    grid-template-columns: 1fr;
+  }
+
+  .scholarship-flyer {
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .pill-button--light {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .sbf-container {
+    width: min(100% - 26px, 1120px);
+  }
+
+  .scholarship-hero {
+    padding: 58px 0 62px;
+  }
+
+  .scholarship-hero h1 {
+    font-size: clamp(2.25rem, 11vw, 3rem);
+  }
+
+  .scholarship-details,
+  .application-section {
+    padding: 60px 0;
+  }
+
+  .button-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pill-button,
+  .pill-button--light {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .eligibility-card,
+  .application-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill-button {
+    transition: none;
+  }
+
+  .pill-button:hover,
+  .pill-button:focus-visible {
+    transform: none;
+  }
+}
+
+/* Keep WordPress theme rules from overriding the page's core design. */
+.sbf-scholarship-page,
+.sbf-scholarship-page * {
+  font-family: "Poppins", Arial, sans-serif !important;
+}
+
+.sbf-scholarship-page .pill-button:not(.pill-button--outline):not(.pill-button--light) {
+  background: #6d01ad !important;
+  color: #ffffff !important;
+}
+
+.sbf-scholarship-page .pill-button:not(.pill-button--outline):not(.pill-button--light):hover,
+.sbf-scholarship-page .pill-button:not(.pill-button--outline):not(.pill-button--light):focus-visible {
+  background: #59018d !important;
+}
+
+.sbf-scholarship-page .pill-button--outline {
+  border-color: #6d01ad !important;
+  background: transparent !important;
+  color: #6d01ad !important;
+}
+
+.sbf-scholarship-page .pill-button--outline:hover,
+.sbf-scholarship-page .pill-button--outline:focus-visible {
+  background: #6d01ad !important;
+  color: #ffffff !important;
+}
+
+.sbf-scholarship-page .pill-button--light {
+  border-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #6d01ad !important;
+}
+
+.sbf-scholarship-page .pill-button--light:hover,
+.sbf-scholarship-page .pill-button--light:focus-visible {
+  background: transparent !important;
+  color: #ffffff !important;
+}

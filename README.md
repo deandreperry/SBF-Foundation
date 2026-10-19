@@ -9,7 +9,9 @@ This repository collects the editable HTML and CSS pages prepared for Social But
 | Home | `/index.html` |
 | $8 for 8 Years | `/8for8/index.html` |
 | About | `/about/index.html` |
+| Board of Directors | `/board-of-directors/index.html` |
 | Programs | `/programs/index.html` |
+| Scholarship | `/scholarship/index.html` |
 | Resource Center | `/resources/index.html` |
 | Contact | `/contact/index.html` |
 | Get Involved | `/get-involved/index.html` |

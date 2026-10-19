@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board of Directors | Social Butterflies Foundation</title>
+    <meta
+      name="description"
+      content="Meet the Board of Directors guiding Social Butterflies Foundation's mission to support people affected by lupus and fibromyalgia."
+    />
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <script src="board.js" defer></script>
+  </head>
+  <body>
+    <main class="sbf-board-page">
+      <section class="leadership-hero" aria-labelledby="leadership-title">
+        <div class="sbf-container leadership-hero__inner">
+          <p class="eyebrow">Our Leadership</p>
+          <h1 id="leadership-title">Meet the People Behind Our Mission</h1>
+          <p class="leadership-hero__intro">
+            Meet the dedicated leaders helping Social Butterflies Foundation
+            advance awareness, advocacy, education, and support for individuals
+            and families affected by lupus and fibromyalgia.
+          </p>
+        </div>
+      </section>
+
+      <section class="board-directory" aria-labelledby="board-title">
+        <div class="sbf-container">
+          <header class="section-heading">
+            <h2 id="board-title">Our Board &amp; Medical Leadership</h2>
+            <p>
+              Leadership rooted in compassion, service, and a commitment to
+              strengthening our community.
+            </p>
+          </header>
+
+          <div class="board-grid">
+            <article class="board-card board-card--featured">
+              <div class="board-card__portrait board-card__portrait--chastity">
+                <img
+                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2022/12/Chastity-Corbett-headshot-600x900.jpg"
+                  alt="Portrait of Chastity Rena' Corbett"
+                  width="600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="board-card__body">
+                <p class="board-card__label">Board President</p>
+                <h3>Chastity Rena’ Corbett</h3>
+                <p class="board-card__role">President / Chief Executive Officer</p>
+                <button
+                  class="bio-button"
+                  type="button"
+                  data-biography="bio-chastity"
+                  aria-haspopup="dialog"
+                >
+                  Read Biography
+                </button>
+              </div>
+            </article>
+
+            <article class="board-card">
+              <div class="board-card__portrait board-card__portrait--crystal">
+                <img
+                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2024/10/Crystal-Soloman-600x1285.jpg"
+                  alt="Portrait of Crystal Solomon"
+                  width="600"
+                  height="1285"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="board-card__body">
+                <p class="board-card__label">Board Leadership</p>
+                <h3>Crystal Solomon</h3>
+                <p class="board-card__role">Vice President / Outreach Administrator</p>
+                <button
+                  class="bio-button"
+                  type="button"
+                  data-biography="bio-crystal"
+                  aria-haspopup="dialog"
+                >
+                  Read Biography
+                </button>
+              </div>
+            </article>
+
+            <article class="board-card">
+              <div class="board-card__portrait board-card__portrait--rhonda">
+                <img
+                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/10/Rhonda-Davis-Headshot.png"
+                  alt="Portrait of Rhonda Davis"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="board-card__body">
+                <p class="board-card__label">Board Leadership</p>
+                <h3>Rhonda Davis</h3>
+                <p class="board-card__role">Director of Communications &amp; Scholarships</p>
+                <button
+                  class="bio-button"
+                  type="button"
+                  data-biography="bio-rhonda"
+                  aria-haspopup="dialog"
+                >
+                  Read Biography
+                </button>
+              </div>
+            </article>
+
+            <article class="board-card">
+              <div class="board-card__portrait board-card__portrait--david">
+                <img
+                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2023/03/Dr-Maxwell-Portrait-278x300.png"
+                  alt="Portrait of Dr. David Maxwell"
+                  width="278"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="board-card__body">
+                <p class="board-card__label">Medical Advisor</p>
+                <h3>Dr. David Maxwell</h3>
+                <p class="board-card__role">Medical Advisor / Rheumatologist</p>
+                <button
+                  class="bio-button"
+                  type="button"
+                  data-biography="bio-david"
+                  aria-haspopup="dialog"
+                >
+                  Read Biography
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="leadership-cta" aria-labelledby="leadership-cta-title">
+        <div class="sbf-container">
+          <div class="leadership-cta__card">
+            <div>
+              <p class="eyebrow">Serve With Purpose</p>
+              <h2 id="leadership-cta-title">Help Shape Our Future</h2>
+              <p>
+                Your experience and commitment can help us make a meaningful
+                difference in the lives of people affected by lupus and
+                fibromyalgia. Board member applications are now being accepted.
+              </p>
+            </div>
+            <a
+              class="pill-button pill-button--light"
+              href="https://socialbutterfliesfoundation.org/get-involved/#board"
+            >
+              Apply to Join the Board
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <dialog
+        class="bio-dialog"
+        id="board-biography"
+        aria-labelledby="bio-dialog-title"
+      >
+        <div class="bio-dialog__shell">
+          <button
+            class="bio-dialog__close"
+            type="button"
+            aria-label="Close biography"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="bio-dialog__content" id="bio-dialog-content"></div>
+        </div>
+      </dialog>
+
+      <template id="bio-chastity">
+        <article class="biography">
+          <p class="biography__eyebrow">President / Chief Executive Officer</p>
+          <h2 id="bio-dialog-title">Chastity Rena’ Corbett</h2>
+          <p>
+            Chastity Rena’ Corbett, known as “The Lupus Conqueror,” is the
+            founder and Chief Executive Officer of Social Butterflies
+            Foundation. She earned a Bachelor of Arts in Political Science and
+            a Master of Arts in Criminal Justice from Norfolk State University,
+            graduating summa cum laude.
+          </p>
+          <p>
+            After being diagnosed with lupus in 2005 and navigating serious
+            medical complications, Chastity turned her lived experience into
+            advocacy. She spearheaded the first official Hampton Roads lupus
+            walk in 2015, helping raise more than $45,000 for lupus research and
+            education.
+          </p>
+          <p>
+            Chastity founded Social Butterflies Foundation on October 5, 2018,
+            to address gaps in education, support, direct assistance, and the
+            connection between patients and the medical community. Her service
+            also includes social action and voter empowerment work through
+            Delta Sigma Theta Sorority, Incorporated.
+          </p>
+        </article>
+      </template>
+
+      <template id="bio-crystal">
+        <article class="biography">
+          <p class="biography__eyebrow">Vice President / Outreach Administrator</p>
+          <h2 id="bio-dialog-title">Crystal Solomon</h2>
+          <p>
+            Crystal Solomon brings a strong academic foundation, professional
+            experience, and a commitment to service to the Social Butterflies
+            Foundation board. She holds a Bachelor of Business Administration
+            with a concentration in Human Resources and a Master of Business
+            Administration in Public Administration.
+          </p>
+          <p>
+            In her professional career, Crystal serves as an Engineering
+            Planning Analyst. Her own fibromyalgia diagnosis in 2015 deepened
+            her understanding of resilience, empathy, caregiving, and the need
+            for dependable community support.
+          </p>
+          <p>
+            Crystal is also an active member of the Alpha Beta Zeta Chapter of
+            Zeta Phi Beta Sorority, Incorporated, where she supports community
+            initiatives and service.
+          </p>
+        </article>
+      </template>
+
+      <template id="bio-david">
+        <article class="biography">
+          <p class="biography__eyebrow">Medical Advisor / Rheumatologist</p>
+          <h2 id="bio-dialog-title">Dr. David Maxwell</h2>
+          <p>
+            Dr. David Maxwell is a fellowship-trained, board-certified
+            rheumatologist with Riverside Rheumatology. He treats lupus,
+            Sjögren’s syndrome, gout, rheumatoid arthritis, psoriatic arthritis,
+            osteoarthritis, and other rheumatic conditions.
+          </p>
+          <p>
+            He earned his medical degree from Eastern Virginia Medical School,
+            completed an internal medicine residency at DePaul Medical Center,
+            and completed his rheumatology fellowship at the Medical University
+            of South Carolina. He is board certified in rheumatology and
+            internal medicine and is a fellow of both the American College of
+            Physicians and the American College of Rheumatology.
+          </p>
+          <p>
+            Dr. Maxwell has served as an instructor of clinical medicine at
+            Eastern Virginia Medical School, participated in clinical trials,
+            and delivered monthly rheumatology lectures through Riverside for
+            two decades. He supports Social Butterflies Foundation’s work to
+            increase lupus and fibromyalgia awareness and support.
+          </p>
+        </article>
+      </template>
+
+      <template id="bio-rhonda">
+        <article class="biography">
+          <p class="biography__eyebrow">Director of Communications &amp; Scholarships</p>
+          <h2 id="bio-dialog-title">Rhonda Davis</h2>
+          <p>
+            Rhonda Davis is an experienced STEM workforce development
+            professional, educator, and community leader with a strong
+            background in program administration, student mentorship, event
+            coordination, and leadership development. At Jefferson Lab, she
+            supports and coordinates STEM education and workforce initiatives,
+            including high school mentorship programs, teacher professional
+            development, summer programs, and the Virginia Regional Middle and
+            High School Science Bowl.
+          </p>
+          <p>
+            A proud Hampton University alumna, Rhonda holds master’s degrees
+            from Regent University and Virginia Tech. She serves as President
+            of the Newport News Education Foundation and as a member of the
+            Board of Directors for the Boys &amp; Girls Clubs of the Virginia
+            Peninsula. She is also a dedicated member of Delta Sigma Theta
+            Sorority, Incorporated, where she has served in numerous leadership,
+            protocol, and service roles.
+          </p>
+          <p>
+            Passionate about creating opportunities for young people,
+            educators, and emerging professionals, Rhonda is known for her
+            leadership, organization, relationship-building, and commitment to
+            service. Her work reflects a lifelong dedication to education,
+            mentorship, community engagement, and helping others reach their
+            full potential.
+          </p>
+        </article>
+      </template>
+    </main>
+  </body>
+</html>

@@ -200,7 +200,8 @@ h1 {
 }
 
 .detail-card,
-.content-card {
+.content-card,
+.scholarship-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -277,6 +278,56 @@ h1 {
 
 .content-card--plain {
   background: var(--white);
+}
+
+.scholarship-card {
+  overflow: hidden;
+  background: var(--white);
+}
+
+.scholarship-card__flyer {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.scholarship-card__content {
+  padding: clamp(26px, 4vw, 38px);
+}
+
+.scholarship-card__content h3 {
+  margin-bottom: 12px;
+  color: var(--sbf-main);
+  font-size: clamp(1.18rem, 2vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.scholarship-card__content p {
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.scholarship-card__content a:not(.pill-button) {
+  color: var(--sbf-main);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.scholarship-card__deadline {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--sbf-soft);
+}
+
+.scholarship-card__deadline strong {
+  color: var(--ink);
+}
+
+.scholarship-card .button-row {
+  margin-top: 22px;
 }
 
 .section-heading {
