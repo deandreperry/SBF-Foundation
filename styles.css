@@ -576,20 +576,37 @@
   object-fit: cover;
 }
 
+.event-card-media--anniversary {
+  background:
+    var(--sbf-soft)
+    url("https://socialbutterfliesfoundation.org/wp-content/uploads/2026/10/sbf-8th-anniversary.webp")
+    center / cover no-repeat;
+}
+
 .event-card-media--anniversary img {
   object-position: center;
 }
 
 .event-card-media--avengers {
-  background: #1f1724;
+  background:
+    #1f1724
+    url("https://socialbutterfliesfoundation.org/wp-content/uploads/2026/10/Avengers-Doomsday-Flyer-727x1024.png")
+    center 28% / cover no-repeat;
 }
 
 .event-card-media--avengers img {
   object-position: center 28%;
 }
 
-.event-card-media--coming-soon img {
-  object-position: center 48%;
+.event-card-media--holiday {
+  background:
+    var(--sbf-soft)
+    url("https://socialbutterfliesfoundation.org/wp-content/uploads/2026/11/Social-Butterflies-Holiday-Outreach-2026.png")
+    center / cover no-repeat;
+}
+
+.event-card-media--holiday img {
+  object-position: center;
 }
 
 .event-card-copy {
@@ -640,8 +657,19 @@
   font-size: 0.94rem;
 }
 
-.event-card--coming-soon {
-  background: #fdfbfe;
+.event-card--clickable {
+  position: relative;
+}
+
+.event-card--clickable .event-button::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.event-card--clickable .event-button:focus-visible::after {
+  outline: 3px solid var(--sbf-main);
+  outline-offset: -3px;
 }
 
 .event-button {

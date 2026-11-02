@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Existing SBF homepage tokens, scoped for WordPress embedding. */
+.sbf-holiday-page {
+  --sbf-main: #6d01ad;
+  --sbf-hover: #59018d;
+  --sbf-light: #f7f1fb;
+  --sbf-soft: #f2ebf7;
+  --sbf-ink: #29272c;
+  --sbf-muted: #6f6976;
+  --sbf-white: #ffffff;
+  --sbf-line: #e7dcec;
+  --sbf-shadow: 0 14px 34px rgba(67, 27, 91, 0.09);
+  background: var(--sbf-white);
+  color: var(--sbf-ink);
+  font: 400 16px/1.65 "Poppins", Arial, sans-serif;
+}
+.sbf-holiday-page, .sbf-holiday-page * { box-sizing: border-box; }
+body:has(> .sbf-holiday-page) { margin: 0; }
+.sbf-holiday-page .holiday-container { width: min(100% - 40px, 1180px); margin-inline: auto; }
+.sbf-holiday-page h1, .sbf-holiday-page h2, .sbf-holiday-page h3 { font-family: inherit; color: var(--sbf-ink); font-weight: 600; line-height: 1.15; margin: 0 0 20px; }
+.sbf-holiday-page h1 { font-size: clamp(2.4rem, 4.8vw, 4.25rem); letter-spacing: -0.025em; }
+.sbf-holiday-page h2 { font-size: clamp(1.9rem, 3.5vw, 2.75rem); }
+.sbf-holiday-page h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.sbf-holiday-page p { margin: 0 0 24px; }
+.sbf-holiday-page .holiday-eyebrow { color: var(--sbf-main); text-transform: uppercase; font-size: .85rem; font-weight: 700; margin-bottom: 16px; }
+.sbf-holiday-page .holiday-hero { padding: clamp(48px, 6vw, 86px) 0; background: linear-gradient(135deg, #ffffff, var(--sbf-light)); }
+.sbf-holiday-page .holiday-hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.sbf-holiday-page .holiday-flyer { margin: 0; min-width: 0; }
+.sbf-holiday-page .holiday-flyer a { display: block; border-radius: 8px; }
+.sbf-holiday-page .holiday-flyer a:focus-visible { outline: 3px solid var(--sbf-main); outline-offset: 5px; }
+.sbf-holiday-page .holiday-flyer img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--sbf-shadow); }
+.sbf-holiday-page .holiday-flyer figcaption { margin-top: 12px; text-align: center; font-size: .875rem; color: var(--sbf-muted); }
+.sbf-holiday-page .holiday-lead { font-size: clamp(1.15rem, 2vw, 1.4rem); color: var(--sbf-main); font-weight: 500; }
+.sbf-holiday-page .holiday-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 26px; border: 2px solid var(--sbf-main); border-radius: 999px; background: var(--sbf-main); color: var(--sbf-white); font: 600 1rem/1.4 "Poppins", Arial, sans-serif; text-decoration: none; text-align: center; }
+.sbf-holiday-page .holiday-button:hover { background: var(--sbf-hover); border-color: var(--sbf-hover); color: var(--sbf-white); }
+.sbf-holiday-page .holiday-button:focus-visible { outline: 3px solid var(--sbf-main); outline-offset: 5px; }
+.sbf-holiday-page .holiday-deadline { padding: 36px 28px; border: 1px solid var(--sbf-line); border-top: 5px solid var(--sbf-main); border-radius: 8px; background: var(--sbf-white); box-shadow: var(--sbf-shadow); text-align: center; }
+.sbf-holiday-page .holiday-deadline time { display: block; margin-bottom: 24px; color: var(--sbf-main); }
+.sbf-holiday-page .holiday-month { display: block; font-size: 1.5rem; font-weight: 500; }
+.sbf-holiday-page .holiday-day { display: block; font-size: clamp(5rem, 9vw, 7rem); line-height: 1.1; font-weight: 600; }
+.sbf-holiday-page .holiday-year { display: block; font-size: 1.1rem; }
+.sbf-holiday-page .holiday-section { padding: clamp(48px, 6vw, 80px) 0; }
+.sbf-holiday-page .holiday-heading { max-width: 740px; margin-bottom: 36px; }
+.sbf-holiday-page .holiday-criteria { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; }
+.sbf-holiday-page .holiday-criteria li { display: flex; gap: 20px; padding: 28px; border: 1px solid var(--sbf-line); border-radius: 8px; }
+.sbf-holiday-page .holiday-criteria li > span { color: var(--sbf-main); font-weight: 600; font-size: 1.25rem; }
+.sbf-holiday-page .holiday-criteria p { margin: 0; color: var(--sbf-muted); }
+.sbf-holiday-page .holiday-notice { margin: 28px 0 0; padding: 24px; border-left: 3px solid var(--sbf-main); background: var(--sbf-light); }
+.sbf-holiday-page .holiday-apply { background: var(--sbf-light); text-align: center; }
+.sbf-holiday-page .holiday-apply .holiday-container { max-width: 800px; }
+.sbf-holiday-page .holiday-form-note { margin-top: 16px; color: var(--sbf-muted); font-size: .875rem; }
+.sbf-holiday-page .holiday-motto { margin: 36px 0 0; color: var(--sbf-main); font-weight: 600; }
+@media (max-width: 760px) {
+  .sbf-holiday-page .holiday-hero-grid, .sbf-holiday-page .holiday-criteria { grid-template-columns: 1fr; }
+  .sbf-holiday-page .holiday-container { width: calc(100% - 40px); }
+  .sbf-holiday-page .holiday-criteria li { padding: 24px 20px; gap: 14px; }
+  .sbf-holiday-page .holiday-deadline { padding: 28px 20px; }
+}

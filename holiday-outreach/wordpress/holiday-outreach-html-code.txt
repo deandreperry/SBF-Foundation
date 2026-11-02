@@ -1,0 +1,48 @@
+  <main class="sbf-holiday-page">
+    <section class="holiday-hero" aria-labelledby="holiday-title">
+      <div class="holiday-container holiday-hero-grid">
+        <div>
+          <p class="holiday-eyebrow">Social Butterflies Foundation</p>
+          <h1 id="holiday-title">2026 Holiday<br>Outreach Program</h1>
+          <p class="holiday-lead">Spreading love, hope, and holiday cheer.</p>
+          <p>Our Holiday Outreach Program provides assistance to eligible families with dependent children affected by lupus and/or fibromyalgia throughout Hampton Roads, Virginia.</p>
+          <p><strong>Apply by <time datetime="2026-11-13">Friday, November 13, 2026</time>.</strong></p>
+          <a class="holiday-button" href="#eligibility">View Eligibility &amp; Apply</a>
+        </div>
+        <figure class="holiday-flyer">
+          <a href="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/11/Social-Butterflies-Holiday-Outreach-2026.png" aria-label="View the full-size 2026 Holiday Outreach flyer">
+            <img src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/11/Social-Butterflies-Holiday-Outreach-2026.png" width="1254" height="1254" alt="2026 Holiday Outreach Program: supporting Hampton Roads families affected by lupus and/or fibromyalgia with dependent children under 18. Application deadline November 13, 2026." loading="eager" decoding="async">
+          </a>
+          <figcaption>View the full-size flyer</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="holiday-section" id="eligibility" aria-labelledby="eligibility-title">
+      <div class="holiday-container">
+        <div class="holiday-heading">
+          <p class="holiday-eyebrow">Who Can Apply</p>
+          <h2 id="eligibility-title">Eligibility Requirements</h2>
+          <p>To be considered for assistance, applicants must meet <strong>all four</strong> of the following criteria.</p>
+        </div>
+        <ol class="holiday-criteria">
+          <li><span aria-hidden="true">01</span><div><h3>Your Household</h3><p>You must be applying for your own household.</p></div></li>
+          <li><span aria-hidden="true">02</span><div><h3>Hampton Roads Residency</h3><p>You must reside in Hampton Roads, Virginia.</p></div></li>
+          <li><span aria-hidden="true">03</span><div><h3>Dependent Children</h3><p>You must be the parent or legal guardian of at least one dependent child under the age of 18.</p></div></li>
+          <li><span aria-hidden="true">04</span><div><h3>Medical Eligibility</h3><p>At least one parent, legal guardian, or child in the household must have a diagnosis of lupus and/or fibromyalgia.</p></div></li>
+        </ol>
+        <p class="holiday-notice"><strong>Please note:</strong> Submitting an application does not guarantee assistance. Support is subject to eligibility verification and available program resources.</p>
+      </div>
+    </section>
+
+    <section class="holiday-section holiday-apply" aria-labelledby="apply-title">
+      <div class="holiday-container">
+        <p class="holiday-eyebrow">Take the Next Step</p>
+        <h2 id="apply-title">Ready to Apply?</h2>
+        <p>Complete the online application by <strong><time datetime="2026-11-13">Friday, November 13, 2026</time></strong>.</p>
+        <a class="holiday-button" href="https://docs.google.com/forms/d/1lBtyr-q6oB6wi0fiBsCz6WoRSIkVTyPkLhPESAWac5c/viewform?pli=1&amp;chromeless=1&amp;pli=1&amp;edit_requested=true">Start Your Application</a>
+        <p class="holiday-form-note">Application hosted on Google Forms.</p>
+        <p class="holiday-motto">Butterflies Don't Let Each Other Fly Alone!</p>
+      </div>
+    </section>
+  </main>
