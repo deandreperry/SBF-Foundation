@@ -1,6 +1,6 @@
 # $8 for 8 Years
 
-Dedicated anniversary campaign at `/8for8`, active through November 30, 2026.
+Dedicated anniversary and Giving Tuesday campaign at `/8for8`, active through December 1, 2026.
 Static HTML/CSS, matching the repository's directory-based routing and standalone
 page conventions. No dependencies, payment implementation, or analytics provider added.
 

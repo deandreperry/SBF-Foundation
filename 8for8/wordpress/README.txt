@@ -19,11 +19,11 @@ iframes and the JavaScript snippet to run. Do not also paste the standalone
 
 SEO SETTINGS (enter in the existing WordPress SEO plugin)
 Title: $8 for 8 Years | Social Butterflies Foundation
-Description: Celebrate Social Butterflies Foundation's 8th anniversary with an $8 gift and help support individuals and families impacted by lupus and fibromyalgia.
+Description: Support Social Butterflies Foundation's official Giving Tuesday campaign with an $8 gift celebrating eight years of impact for lupus and fibromyalgia thrivers.
 Canonical: https://socialbutterfliesfoundation.org/8for8
 Use the same title/description for social sharing. Add an approved campaign
 image when available; none is bundled.
 
-The page remains visible after November 30, 2026 until manually archived.
+The page remains visible after December 1, 2026 until manually archived.
 The WordPress files are exported from the standalone campaign page. Regenerate
 or update them together if campaign content or styling changes.

@@ -15,6 +15,7 @@
   color: var(--sbf-ink);
   background: var(--sbf-white);
   font: 400 16px/1.65 "Poppins", Arial, sans-serif;
+  overflow-x: clip;
 }
 .sbf-campaign-page *, .sbf-campaign-page *::before, .sbf-campaign-page *::after { box-sizing: border-box; }
 .sbf-campaign-page :is(h1,h2,h3,p) { margin: 0; }
@@ -36,17 +37,14 @@
 .campaign-skip:focus { transform: none; }
 .campaign-hero { padding: 76px 0 64px; background: linear-gradient(120deg,#fff 15%,var(--sbf-light)); }
 .campaign-hero-grid { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); align-items: center; gap: 72px; }
+.campaign-hero-grid > * { min-width: 0; }
 .sbf-campaign-page h1 { font-size: clamp(3.4rem,6.4vw,5.8rem); line-height: 1.03; letter-spacing: -.055em; margin-bottom: 28px; }
 .sbf-campaign-page h1 span { display: block; color: var(--sbf-main); }
 .campaign-hero-copy > p:not(.eyebrow,.campaign-date) { max-width: 620px; }
 .sbf-campaign-page .campaign-lead { font-size: clamp(1.08rem,1.5vw,1.2rem); line-height: 1.65; }
 .sbf-campaign-page .campaign-date { color: var(--sbf-muted); font-size: .875rem; margin-top: 22px; }
-.anniversary-art { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 30px; border: 1px solid #dac8e5; border-radius: 180px 180px 8px 8px; background: var(--sbf-soft); color: var(--sbf-main); text-align: center; }
-.anniversary-top { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-top: 20px; }
-.anniversary-number { font-size: clamp(14rem,25vw,23rem); font-weight: 600; line-height: 1.05; letter-spacing: -.08em; margin-left: -.08em; color: transparent; -webkit-text-stroke: 1.5px var(--sbf-main); }
-.anniversary-bottom { font-size: .95rem; font-weight: 500; }
-.anniversary-marks { display: flex; gap: 9px; margin-top: 24px; }
-.anniversary-marks i { width: 5px; height: 5px; border-radius: 50%; background: var(--sbf-main); }
+.anniversary-art { margin: 0; overflow: hidden; border: 1px solid #dac8e5; border-radius: 8px; background: var(--sbf-soft); box-shadow: 0 18px 42px rgba(67,27,91,.12); }
+.anniversary-art img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 .campaign-progress { padding: 0 0 12px; background: var(--sbf-light); }
 .progress-panel { border: 1px solid var(--sbf-line); border-radius: 8px; background: white; padding: 30px 36px 18px; }
 .progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
@@ -81,6 +79,7 @@
 .zeffy-panel { width: 100%; max-width: 960px; margin-inline: auto; min-width: 0; border: 1px solid var(--sbf-line); border-radius: 8px; background: white; }
 .zeffy-panel { min-height: 600px; }
 .zeffy-panel iframe { display: block; max-width: 100%; }
+.zeffy-panel > div, .zeffy-panel [data-zeffy-embed], .zeffy-panel iframe { width: 100% !important; min-width: 0 !important; max-width: 100% !important; }
 .zeffy-noscript { width: 100%; height: 650px; border: 0; }
 .sbf-campaign-page .donation-help { text-align: center; margin-top: 16px; font-size: .875rem; color: var(--sbf-muted); }
 .donation-help a { display: inline-block; padding-block: 12px; }
@@ -95,8 +94,7 @@
 .sbf-campaign-page .campaign-final a:focus-visible { outline-color: white; }
 @media (max-width:980px) {
   .campaign-hero-grid { gap: 36px; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); }
-  .anniversary-art { padding: 24px 16px; }
-  .anniversary-top { font-size: .7rem; }
+  .anniversary-art { align-self: center; }
   .campaign-story-grid { gap: 40px; }
   .campaign-impact-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px; }
 }
@@ -105,7 +103,7 @@
   .campaign-hero { padding: 44px 0 32px; }
   .campaign-hero-grid, .campaign-story-grid, .campaign-final-grid { grid-template-columns: 1fr; gap: 28px; }
   .sbf-campaign-page h1 { font-size: clamp(3.3rem,13vw,5rem); }
-  .anniversary-art { display: none; }
+  .anniversary-art { display: block; order: 2; }
   .campaign-section { padding: 48px 0; }
   .progress-panel { padding: 22px 14px 14px; }
   .progress-heading { align-items: flex-start; gap: 12px; }
