@@ -1,15 +1,17 @@
-# 2026 Holiday Outreach Program
+# Holiday Outreach Program archive instructions
 
-Create the WordPress page with slug `holiday-outreach`, using the site's existing full-width template, header, and footer. Hide any automatic page title that duplicates the hero.
+The 2026 application period has ended. The program must not appear in active navigation, homepage promotions, or application entry points.
 
-- Paste `wordpress/holiday-outreach.html` into a Custom HTML block.
-- Paste `wordpress/holiday-outreach.css` into the page CSS field or Additional CSS. No JavaScript is required.
-- Update the homepage with the new Holiday Outreach announcement from the root `index.html` and the root `styles.css`.
-- Preview the page and verify the Google Form from a signed-out browser before publishing. The supplied updated responder URL returned HTTP 401 during verification on November 2, 2026; public access has not been confirmed.
-- The November 13, 2026 deadline is displayed explicitly. After the deadline, remove the homepage announcement and replace the page's application links with a closed-applications message. No cutoff time has been supplied, so this page does not impose an automatic deadline.
+## WordPress cleanup
 
-The standalone `index.html` loads `styles.css` for local preview. WordPress files contain the same page content and styles without a full document wrapper.
+1. Remove the Holiday Outreach Program menu item from desktop and mobile navigation.
+2. Remove any Holiday Outreach application buttons or promotional blocks.
+3. Configure a permanent **301 redirect** from both legacy paths to the Programs page:
+   - `/holiday-outreach-program/` → `/programs/`
+   - `/holiday-outreach/` → `/programs/`
+4. Remove the page from any XML sitemap after the redirect is active.
+5. Do not delete internal application records, historical submissions, or media assets.
 
-SEO title: 2026 Holiday Outreach Program | Social Butterflies Foundation
+If a server-side redirect cannot be configured immediately, use the fallback WordPress HTML in `wordpress/holiday-outreach.html`. It contains no application link and directs visitors to current programs.
 
-Description: Holiday assistance for eligible Hampton Roads families affected by lupus and/or fibromyalgia with dependent children under 18. Apply by November 13, 2026.
+The standalone `index.html` files use a client-side redirect only for local/static preview. A server-side 301 is preferred for the live WordPress site.

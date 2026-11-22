@@ -11,6 +11,7 @@ This repository collects the editable HTML and CSS pages prepared for Social But
 | About | `/about/index.html` |
 | Board of Directors | `/board-of-directors/index.html` |
 | Programs | `/programs/index.html` |
+| Emergency Financial Assistance | `/emergency-financial-assistance/index.html` |
 | Scholarship | `/scholarship/index.html` |
 | Resource Center | `/resources/index.html` |
 | Contact | `/contact/index.html` |

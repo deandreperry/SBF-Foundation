@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Social Butterflies Foundation</title>
-    <link rel="stylesheet" href="styles.css?v=20261103" />
+    <link rel="stylesheet" href="styles.css?v=20261121-2" />
+    <script src="homepage-events.js?v=20261121" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -123,7 +124,7 @@
             </div>
 
             <div class="programs-grid">
-              <a class="program-item" href="https://socialbutterfliesfoundation.org/programs/#emergency-financial-assistance">
+              <a class="program-item" href="https://socialbutterfliesfoundation.org/emergency-financial-assistance/">
                 <span>01</span>
                 <h3>Emergency Financial Assistance</h3>
                 <p>Limited grants for qualifying lupus and fibromyalgia-related medical needs.</p>
@@ -192,34 +193,12 @@
       <section class="events-section" id="events" aria-labelledby="events-heading">
         <div class="sbf-container">
           <div class="section-heading">
-            <p class="eyebrow">SBF Events &amp; Special Programs</p>
+            <p class="eyebrow">SBF Events &amp; Campaigns</p>
             <h2 id="events-heading">Gather, give, and move the mission forward.</h2>
           </div>
 
-          <div class="events-grid">
-            <article class="event-card event-card--clickable">
-              <figure class="event-card-media event-card-media--holiday">
-                <img
-                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/11/Social-Butterflies-Holiday-Outreach-2026.png"
-                  width="1254"
-                  height="1254"
-                  alt="Social Butterflies Foundation 2026 Holiday Outreach Program"
-                  loading="eager"
-                  decoding="async"
-                />
-              </figure>
-              <div class="event-card-copy">
-                <span class="card-kicker">Special Program</span>
-                <h3>Holiday Outreach Program</h3>
-                <div class="event-meta">
-                  <p class="event-date">Apply by <time datetime="2026-11-13">November 13, 2026</time></p>
-                </div>
-                <p class="event-description">Holiday assistance for eligible Hampton Roads families with dependent children affected by lupus and/or fibromyalgia.</p>
-                <a class="pill-button event-button" href="https://socialbutterfliesfoundation.org/holiday-outreach-program/" aria-label="View details and eligibility for the 2026 Holiday Outreach Program">View Program</a>
-              </div>
-            </article>
-
-            <article class="event-card">
+          <div class="events-grid" data-event-grid>
+            <article class="event-card" data-event-card data-event-status="active">
               <figure class="event-card-media event-card-media--anniversary">
                 <img
                   src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/11/Social-Butterflies-8-for-8-Giving-Tuesday-Campaign.png"
@@ -241,7 +220,7 @@
               </div>
             </article>
 
-            <article class="event-card">
+            <article class="event-card" data-event-card data-event-status="active">
               <figure class="event-card-media event-card-media--avengers">
                 <img
                   src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/10/Avengers-Doomsday-Flyer-727x1024.png"
@@ -261,6 +240,29 @@
                 </div>
                 <p class="event-description">Join Social Butterflies Foundation for a private viewing of Avengers: Doomsday while supporting lupus and fibromyalgia thrivers and their families.</p>
                 <a class="pill-button event-button" href="https://socialbutterfliesfoundation.org/event/avengers-doomsday-movie-fundraiser/" aria-label="View details for the Avengers: Doomsday Movie Fundraiser">View Event</a>
+              </div>
+            </article>
+
+            <article
+              class="event-card event-card--placeholder"
+              data-event-placeholder
+              aria-labelledby="sbf-coming-soon-fallback"
+            >
+              <figure class="event-card-media event-card-media--placeholder">
+                <img
+                  src="https://socialbutterfliesfoundation.org/wp-content/uploads/2026/10/sbf-events-coming-soon.webp"
+                  width="1200"
+                  height="751"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="event-card-copy">
+                <span class="card-kicker">Future Events</span>
+                <h3 id="sbf-coming-soon-fallback">Coming Soon</h3>
+                <p class="event-description">Stay tuned for upcoming SBF events and campaigns.</p>
+                <span class="event-placeholder-status" aria-label="Event status: Coming Soon">Coming Soon</span>
               </div>
             </article>
 

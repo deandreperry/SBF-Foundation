@@ -1,0 +1,11 @@
+# Preferred WordPress redirect configuration
+#
+# Add these as permanent 301 redirects in the site's redirect manager,
+# or add the equivalent rules at the web-server level.
+
+/holiday-outreach-program/  /programs/  301
+/holiday-outreach/          /programs/  301
+
+# Apache Redirect directives, if server configuration access is available:
+# Redirect 301 /holiday-outreach-program/ https://socialbutterfliesfoundation.org/programs/
+# Redirect 301 /holiday-outreach/ https://socialbutterfliesfoundation.org/programs/

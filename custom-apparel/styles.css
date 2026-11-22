@@ -272,7 +272,11 @@ body {
 .policy-grid details p { max-width: 910px; padding: 0 22px; margin: 0 0 16px; color: var(--sbf-muted); font-size: 0.92rem; line-height: 1.68; }
 .policy-grid details p:last-child { padding-bottom: 7px; }
 
-.apparel-cta { padding: 64px 0; background: #28252c; color: var(--sbf-white); }
+.apparel-cta {
+  padding: 64px 0;
+  background: linear-gradient(112deg, #b283c8 0%, #6d01ad 55%, #59018d 100%);
+  color: var(--sbf-white);
+}
 .apparel-cta__layout { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .apparel-cta h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
 .apparel-cta p:not(.apparel-eyebrow) { margin: 13px 0 0; color: rgba(255, 255, 255, 0.78); }
